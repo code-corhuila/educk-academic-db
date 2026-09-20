@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  academic-db:
+    image: postgres:16-alpine
+    container_name: educk-academic-db
+    environment:
+      POSTGRES_DB: academic_db
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+    ports:
+      - "5432:5432"
+    volumes:
+      - academic_data:/var/lib/postgresql/data
+      - ./migrations:/docker-entrypoint-initdb.d:ro
+volumes:
+  academic_data:
