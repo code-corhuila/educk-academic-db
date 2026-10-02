@@ -64,3 +64,4 @@ INSERT INTO grades (id, enrollment_id, term_id, score, feedback) VALUES
 ('grd-003', 'enr-003', 1, 4.90, 'Rigurosa justificación de orden causal y modelo de seguridad.'),
 ('grd-004', 'enr-004', 1, 5.00, 'Liderazgo técnico intachable, automatizaciones de gobernanza y despliegue impecable.')
 ON CONFLICT DO NOTHING;
+
