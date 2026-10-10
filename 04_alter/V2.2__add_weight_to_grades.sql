@@ -1,0 +1,1 @@
+ALTER TABLE academic_schema.grades ADD COLUMN weight DECIMAL(3,2) NOT NULL DEFAULT 1.00;
