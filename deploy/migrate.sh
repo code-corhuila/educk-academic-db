@@ -7,4 +7,6 @@ cp /domain/01_ddl/V2.1__performance_indexes.sql /tmp/domain-migrations/
 cp /domain/04_alter/V2.2__add_weight_to_grades.sql /tmp/domain-migrations/
 cp /domain/04_alter/V2.3__align_grade_precision.sql /tmp/domain-migrations/
 cp /domain/04_alter/V3__annex_j_permissions.sql /tmp/domain-migrations/
+cp /domain/02_dml/V3.1__seed_demo_grades.sql /tmp/domain-migrations/
+cp /domain/02_dml/V3.2__seed_demo_exam_assignment.sql /tmp/domain-migrations/
 exec flyway -locations=filesystem:/tmp/domain-migrations -schemas=academic_schema -defaultSchema=academic_schema -cleanDisabled=true migrate
